@@ -43,7 +43,7 @@ namespace CSharpTutorial
             }
         }
 
-        public void SortowanieTablicy()
+        public static void SortowanieTablicy()
         {
             int[] arrayToSort = { 73, 57, 49, 99, 133, 20, 1 };
             Console.WriteLine("Tabela oryginalna:");
@@ -60,21 +60,21 @@ namespace CSharpTutorial
             }
             Console.Write("]");
 
-            for (int i = 0; i < arrayToSort.Length; i++)
-            {
-                for (int j = i + 1; j < arrayToSort.Length; j++)
-                {
-                    if (arrayToSort[i] > arrayToSort[j])
-                    {
-                        int tmp = arrayToSort[i];
-                        arrayToSort[i] = arrayToSort[j];
-                        arrayToSort[j] = tmp;
-                        changeCounter++;
-                    }
+            //for (int i = 0; i < arrayToSort.Length; i++)
+            //{
+            //    for (int j = i + 1; j < arrayToSort.Length; j++)
+            //    {
+            //        if (arrayToSort[i] > arrayToSort[j])
+            //        {
+            //            int tmp = arrayToSort[i];
+            //            arrayToSort[i] = arrayToSort[j];
+            //            arrayToSort[j] = tmp;
+            //            changeCounter++;
+            //        }
 
-                    counter++;
-                }
-            }
+            //        counter++;
+            //    }
+            //}
 
             for (int i = 0; i < arrayToSort.Length; i++)
             {

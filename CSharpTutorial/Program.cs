@@ -742,42 +742,41 @@ namespace CSharpTutorial
 
             //var kolory = new string[] { "czerwony", "zielony", "niebieski", "żółty" };
 
-            string[,] bibliotekaGier = new string[4, 4]
-            {
-                { "FPS", "RTS", "RPG", "MMO"},
-                { "COD", "AoE", "Wiedźmin", "Metin"},
-                { "ET", "Starcraft", "Skyrim", "WoW" },
-                { "Battlefield", "Warcraft", "Gothic", "Runs of Magic" }
-            };
+            //string[,] bibliotekaGier = new string[4, 4]
+            //{
+            //    { "FPS", "RTS", "RPG", "MMO"},
+            //    { "COD", "AoE", "Wiedźmin", "Metin"},
+            //    { "ET", "Starcraft", "Skyrim", "WoW" },
+            //    { "Battlefield", "Warcraft", "Gothic", "Runs of Magic" }
+            //};
 
-            Console.WriteLine("Podaj nazwę gry: ");
-            string gra = Console.ReadLine();
-            int indexNumber = -1;
+            //Console.WriteLine("Podaj nazwę gry: ");
+            //string gra = Console.ReadLine();
+            //int indexNumber = -1;
 
-            for(int i = 1; i < 4; i++)
-            {
-                for(int j = 0; j < 4; j++)
-                {
-                    if (bibliotekaGier[i, j] == gra)
-                    {
-                        indexNumber = j; 
-                        break;
-                    }
-                }
-            }
+            //for(int i = 1; i < 4; i++)
+            //{
+            //    for(int j = 0; j < 4; j++)
+            //    {
+            //        if (bibliotekaGier[i, j] == gra)
+            //        {
+            //            indexNumber = j; 
+            //            break;
+            //        }
+            //    }
+            //}
 
-            if(indexNumber != -1)
-            {
-                Console.WriteLine($"Gra {gra} ma typ: {bibliotekaGier[0, indexNumber]}");
-            }
-            else
-            {
-                Console.WriteLine("Podałeś złą nazwę gry");
-            }
+            //if(indexNumber != -1)
+            //{
+            //    Console.WriteLine($"Gra {gra} ma typ: {bibliotekaGier[0, indexNumber]}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Podałeś złą nazwę gry");
+            //}
 
             //Zadanie - odwróć string
             //Pobierz tekst od użytkownika i wypisz go od tyłu, np kot -> tok
-
 
             //var arrayToGoThrough = new int[15];
             //Console.Write("\n[");
@@ -798,8 +797,31 @@ namespace CSharpTutorial
             //Zadanie:
             //Napisz program, który sprawdza, czy dane słowo jest palindromem
 
-            //break i continue
+            //Console.WriteLine("Podaj słowo:");
+            //var textToCheck = Console.ReadLine();
+            //bool isPalindrome = true;
 
+            //int a, b = 0;
+
+            //for(int i = 0, j = textToCheck.Length - 1; i < textToCheck.Length / 2; i++, j--)
+            //{
+            //    if (textToCheck[i] != textToCheck[j])
+            //    {
+            //        isPalindrome = false;
+            //        break;
+            //    }
+            //}
+
+            //if(isPalindrome)
+            //{
+            //    Console.WriteLine("Słowo jest palindromem");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Słowo nie jest palindromem");
+            //}
+
+            //break i continue
 
             //Zadanie:
             //Napisz program, który posortuje tablicę liczb int
@@ -808,11 +830,13 @@ namespace CSharpTutorial
             #endregion
 
             #region Pętla foreach 
-            //var tablicaStringów = new string[] { "Ala", "ma", "kota"};
-            //foreach(var element in tablicaStringów)
+            var tablicaStringów = new string[] { "Ala", "ma", "kota", "perskiego" };
+
+            //foreach (var element in tablicaStringów)
             //{
-            //    Console.WriteLine(element);
+            //    resultString += element + " " + "słowo";
             //}
+
 
             //nie można zmieniać elementu w pętli for - używana kolekcja jest readonly
 
@@ -820,16 +844,88 @@ namespace CSharpTutorial
             //Napisz program, który sumuje 
             #endregion
 
+            //for(int i = 0; i < 5; i++)
+            //{
+            //    if(i == 3)
+            //    {
+            //        continue;
+            //    }
+
+            //    Console.WriteLine(i);
+            //}
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    if (i != 3)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
+
+
+            //Console.WriteLine("Za pętlą for");
+
             #region Pętla while
+
             //Najpierw sprawdzany jest warunek, potem wykonywane jest to, co w środku
+            //int j = 0;
+            //int[] tablicaIntow = { 0, 1, 2, 3, 4, 5, 6 };
+            //while(j < tablicaIntow.Length)
+            //{
+            //    if (tablicaIntow[j] % 2 == 0)
+            //    {
+            //        j++;
+            //        continue;
+            //    }
+            //    else
+            //    {
+            //        j++;
+            //        Console.WriteLine($"Liczba {tablicaIntow[j]} jest parzysta");
+            //    }
+            //}
+
+            //int opcja = 0;
+            //do
+            //{
+            //    Console.WriteLine("To jest pętla do-while");
+            //    Console.WriteLine("MENU");
+            //    Console.WriteLine("0. Zakończ program");
+            //    Console.WriteLine("1. Dodawanie");
+            //    Console.WriteLine("2. Odejmowanie");
+            //} while (opcja != 0);
+
+            //while (opcja != 0)
+            //{
+            //    Console.WriteLine("To jest pętla while");
+            //    Console.WriteLine("MENU");
+            //    Console.WriteLine("0. Zakończ program");
+            //    Console.WriteLine("1. Dodawanie");
+            //    Console.WriteLine("2. Odejmowanie");
+            //}
+            //Console.WriteLine("Kod poza pętlą");
 
             //Nieskończona pętla while
 
-            //Zadanie - zgadywanie liczby dopóki użytkownik nie wpisze poprawnej
-            //Napisz program, który pobierze liczbę od użytkownika
+            //różnica między while a do-while
+
+            //Zadanie:
+            //Stwórz tablicę z kilkoma elementami
+            //Wypisz elementy tablicy używając pętli for, foreach i while
+
+            //Zadanie - wyświetlanie wyniku obliczen,
+            //dopoki uzytkownik nie wybierze opcji zakonczenia programu
+            //Przyjmij od użytkownika 2 liczby całkowite
+            //Wyświetl menu z opcjami:
+            //1. Dodawanie
+            //2. Odejmowanie
+            //3. Mnożenie
+            //4. Dzielenie
+            //0. Zakończenie programu
+            //wyświetlaj menu dopóki użytkownik nie wybierze opcji 0 - zakończenie programu
 
             #endregion
 
+            Rozwiazania.SortowanieTablicy();
 
             #region Typy referencyjne i wartościowe
             //Console.WriteLine("-----Typy referencyjne-----");
