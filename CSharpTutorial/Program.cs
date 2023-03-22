@@ -830,7 +830,7 @@ namespace CSharpTutorial
             #endregion
 
             #region Pętla foreach 
-            var tablicaStringów = new string[] { "Ala", "ma", "kota", "perskiego" };
+            //var tablicaStringów = new string[] { "Ala", "ma", "kota", "perskiego" };
 
             //foreach (var element in tablicaStringów)
             //{
@@ -925,7 +925,7 @@ namespace CSharpTutorial
 
             #endregion
 
-            Rozwiazania.SortowanieTablicy();
+            //Rozwiazania.SortowanieTablicy();
 
             #region Typy referencyjne i wartościowe
             //Console.WriteLine("-----Typy referencyjne-----");
