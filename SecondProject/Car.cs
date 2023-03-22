@@ -23,15 +23,15 @@ namespace SecondProject
         }
 
         public string Marka { get; set; }
-        //model
+
         public string Model { get; set; }
-        //liczba drzwi
+
         public int LiczbaDrzwi { get; set; } = 5;
-        //prędkość maksymalna
+
         public int MaksymalnaPredkosc { get; set; }
-        //tablica wyposażenie dodatkowe
+
         public string[] Wyposazenie { get; set; }
-        //dźwięk
+
 
         public void UzyjKlaksonu()
         {
