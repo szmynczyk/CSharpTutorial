@@ -7,12 +7,9 @@
             string czescImienia = Imie[0].ToString();
             string czescNazwiska = Nazwisko[0].ToString();
             string inicjaly;
-            string[] gloski =
-            {
-                    "cz", "sz", "dz", "rz", "dż", "dź", "ch"
-                };
+            string[] wyjatki = { "cz", "sz", "dz", "rz", "dż", "dź", "ch" };
 
-            foreach (var gloska in gloski)
+            foreach (var gloska in wyjatki)
             {
                 if (gloska == Imie.Substring(0, 2).ToLower())
                 {
@@ -21,7 +18,7 @@
                 }
             }
 
-            foreach (var gloska in gloski)
+            foreach (var gloska in wyjatki)
             {
                 if (gloska == Nazwisko.Substring(0, 2).ToLower())
                 {

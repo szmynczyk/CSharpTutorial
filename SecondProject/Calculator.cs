@@ -1,4 +1,6 @@
-﻿namespace SecondProject
+﻿using System;
+
+namespace SecondProject
 {
     public static class Calculator
     {
@@ -7,7 +9,7 @@
             return liczba1 + liczba2;
         }
 
-        public static int Doda(int[] liczby)
+        public static int Dodaj(int[] liczby)
         {
             int result = 0;
 
@@ -28,8 +30,18 @@
             return liczba1 + liczba2;
         }
 
+        public static float Dodaj(params float[] liczby)
+        {
+            float result = 0f;
+            foreach(float liczba in liczby)
+            {
+                result += liczba;
+            }
 
+            Console.WriteLine($"Wynik dodawania {liczby.Length} liczb typu float to: {result}");
 
+            return result;
 
+        }
     }
 }

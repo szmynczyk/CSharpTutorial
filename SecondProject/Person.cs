@@ -11,25 +11,27 @@ namespace SecondProject
 
         //stary sposób zapisu
         private string nazwisko;
-        public string Nazwisko 
+        public string Nazwisko
         {
             get { return nazwisko; }
             set { nazwisko = value; }
         }
 
+        //public string Nazwisko { get; set; }
+
         //tylko do odczytu
         public int Wiek => (int)(DateTime.Now - DataUrodzenia).TotalDays/365;
 
         //tylko do odczytu - stary sposób
-        //public string Inicjały 
-        //{
-        //    get { return string.Concat(Imie[0], ".", Nazwisko[0], "."); }
-        //}
-
         public string Inicjały
         {
-            get => string.Concat(Imie[0], ".", Nazwisko[0], ".");
+            get { return string.Concat(Imie[0], ".", Nazwisko[0], "."); }
         }
+
+        //public string Inicjały
+        //{
+        //    get => string.Concat(Imie[0], ".", Nazwisko[0], ".");
+        //}
 
         //public string Inicjały
         //{
@@ -40,9 +42,16 @@ namespace SecondProject
         //}
 
         //przypisanie wartości domyślnej
-        public DateTime DataUrodzenia { get; set; } = DateTime.Now - TimeSpan.FromDays(365 * 20);
+        public DateTime DataUrodzenia { get; set; } = new DateTime(month: 3, year: 2003, day: 15);
+
         public char Płeć { get; init; } = 'm'; //tylko przy tworzeniu
+
         public string Obywatelstwo { get; private set; } //przypisywanie tylko wewnątrz klasu
+
+        public void PrzeprowadzSieDoInnegoKraju(string nazwaKraju)
+        {
+            Obywatelstwo = nazwaKraju;
+        }
 
         public void PrzedstawSie()
         {
