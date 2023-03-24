@@ -116,13 +116,31 @@ namespace CSharpTutorial
             //można zastąpić metodą:
             ja.PrzedstawSie();
 
+            //pola i właściwości statyczne - liczba populacji: Person
+            var someOtherPerson = new Person(); //zwiększy się licznik
+
+            //klasa statyczna - nie można utworzyć instancji, wszystkie składowe statyczne
+
             //metoda z parametrami
             //metoda z param
+            //parametry domyślne
+            //parametry nazwane
+
             //metoda statyczna
+            Person.PokazLiczbeLudnosci();
+
             //przeciążenie metody
+            //nie ma znaczenia typ zwracany, tylko nazwa i parametry
             //metoda statyczna
+
             //pola statyczne
+
             //konstruktory
+            var osoba1 = new Person("Kacper", "Saganek", new DateTime(1992, 10, 26));
+            //domyślny konstruktor
+            //dodanie konstruktora powoduje, że nie mamy już konstruktora domyślnego
+            //konstruktor z parametrami
+            //wywoływanie jednego konstruktora z drugiego
 
             #endregion
         }

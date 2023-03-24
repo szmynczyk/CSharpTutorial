@@ -4,6 +4,8 @@ namespace SecondProject
 {
     internal class Person
     {
+        private static ulong liczbaLudnosci = 0;
+
         //nowy sposób zapisu
         public string Imie { get; set; }
 
@@ -48,6 +50,30 @@ namespace SecondProject
             Console.WriteLine($"Urodziłem się {DataUrodzenia.ToShortDateString()} więc mam {Wiek} lat(a)");
             string plec = Płeć == 'm' ? "mężczyzna" : "kobieta";
             Console.WriteLine($"Moja płeć biologiczna to: {plec}");
+        }
+
+        public Person()
+        {
+            ++liczbaLudnosci;
+        }
+
+        public static void PokazLiczbeLudnosci()
+        {
+            Console.WriteLine($"Liczba ludności to: {liczbaLudnosci}");
+        }
+
+        public Person(string imie, string nazwisko, DateTime dataUrodzenia) : this()
+        {
+            //this odnosi się konkretnie do składowych tego obiektu
+            this.Imie = imie;
+            Nazwisko = nazwisko;
+            DataUrodzenia = dataUrodzenia;
+        }
+
+        //wywołanie jednego konstruktora przez drugi
+        public Person(string imie, string nazwisko, DateTime dataUrodzenia, char plec) : this(imie, nazwisko, dataUrodzenia)
+        {
+            Płeć = plec;
         }
     }
 }
