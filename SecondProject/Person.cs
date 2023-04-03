@@ -70,28 +70,31 @@ namespace SecondProject
             }
         }
 
-        public Person()
-        {
-            ++liczbaLudnosci;
-        }
-
         public static void PokazLiczbeLudnosci()
         {
             Console.WriteLine($"Liczba ludności to: {liczbaLudnosci}");
         }
 
+        public Person()
+        {
+            ++liczbaLudnosci;
+            Console.WriteLine("Konstruktor bezparametrowy");
+        }
+
         public Person(string imie, string nazwisko, DateTime dataUrodzenia) : this()
         {
             //this odnosi się konkretnie do składowych tego obiektu
-            this.Imie = imie;
+            Imie = imie;
             Nazwisko = nazwisko;
             DataUrodzenia = dataUrodzenia;
+            Console.WriteLine("Konstruktor z parametrami: imie, nazwisko, data urodzenia");
         }
 
         //wywołanie jednego konstruktora przez drugi
         public Person(string imie, string nazwisko, DateTime dataUrodzenia, char plec) : this(imie, nazwisko, dataUrodzenia)
         {
             Płeć = plec;
+            Console.WriteLine("Konstruktor z parametrami: imie, nazwisko, data urodzenia, plec");
         }
     }
 }

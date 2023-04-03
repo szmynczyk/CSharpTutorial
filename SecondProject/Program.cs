@@ -141,12 +141,12 @@ namespace CSharpTutorial
 
             #region Metody
 
-            Person ja = new Person();
-            ja.Imie = "Marcin";
-            ja.Nazwisko = "Szymczyk";
-            ja.DataUrodzenia = new DateTime(year: 1990, month: 3, day: 15);
-            ja.PrzeprowadzSieDoInnegoKraju();
-            ja.PrzedstawSie(false, false);
+            //Person ja = new Person();
+            //ja.Imie = "Marcin";
+            //ja.Nazwisko = "Szymczyk";
+            //ja.DataUrodzenia = new DateTime(year: 1990, month: 3, day: 15);
+            //ja.PrzeprowadzSieDoInnegoKraju();
+            //ja.PrzedstawSie(false, false);
 
             //Console.WriteLine($"Nowe obywatelstwo to: {ja.Obywatelstwo}");
             //Console.WriteLine($"Nazywam się {ja.Imie} {ja.Nazwisko}, moje inicjały to: {ja.Inicjały}");
@@ -171,7 +171,7 @@ namespace CSharpTutorial
             //Person kacper = new Person("Kacper", "Saganek", new DateTime(1992, 26, 7));
             //kacper.PrzedstawSie();
 
-            Calculator.Dodaj(5);
+            //Calculator.Dodaj(5);
 
             //decimal decimal1 = 4.6M;
             //decimal decimal2 = 5.1M;
@@ -192,18 +192,8 @@ namespace CSharpTutorial
             //metoda statyczna
             //Person.PokazLiczbeLudnosci();
 
-            Car samochod = new Car();
-            samochod.ObliczSredniZasieg;
-
-
-            //pola statyczne
-
-            //konstruktory
-            //var osoba1 = new Person("Kacper", "Saganek", new DateTime(1992, 10, 26));
-            //domyślny konstruktor
-            //dodanie konstruktora jakiegokolwiek konstruktora powoduje, że nie mamy już konstruktora domyślnego
-            //konstruktor z parametrami
-            //wywoływanie jednego konstruktora z drugiego
+            //Car samochod = new Car();
+            //samochod.ObliczSredniZasieg();
 
             //float f1 = 1.0f;
             //float f2 = 3.14f;
@@ -213,34 +203,6 @@ namespace CSharpTutorial
             //Calculator.Dodaj(f1, f2);
             //Calculator.Dodaj(f1, f2, f3);
             //Calculator.Dodaj(f1, f2, f3, f4);
-
-            //var przegladarka = Przegladarka.Firefox;
-
-            //switch ( przegladarka )
-            //{
-            //    case Przegladarka.Firefox:
-            //        Console.WriteLine("Konfiguracja dla firefoxa");
-            //        break;
-            //    case Przegladarka.Chrome:
-            //        Console.WriteLine("Konfiguracja dla chrome");
-            //        break;
-            //    case Przegladarka.Safari:
-            //        Console.WriteLine("Konfiguracja dla Safari");
-            //        break;
-            //    case Przegladarka.Edge:
-            //        Console.WriteLine("Konfiguracja dla Edge");
-            //        break;
-            //    default:
-            //        Console.WriteLine("Nie ma takiej przeglądarki");
-            //        break;
-            //}
-
-            //Console.WriteLine("Przeglądarka firefox: " + (int)Przegladarka.Firefox);
-            //Console.WriteLine("Przeglądarka chrome: " + (int)Przegladarka.Chrome);
-            //Console.WriteLine("Przeglądarka safari: " + (int)Przegladarka.Safari);
-            //Console.WriteLine("Przeglądarka edge: " + (int)Przegladarka.Edge);
-
-
 
             #endregion
 
@@ -292,6 +254,25 @@ namespace CSharpTutorial
 
             //Console.WriteLine($"string1 po zmianie: {string1}");
             //Console.WriteLine($"string2 po zmianie: {string2}");
+            #endregion
+
+            #region Konstruktory
+
+            //var osoba1 = new Person("Kacper", "Saganek", new DateTime(1992, 10, 26));
+            //domyślny konstruktor
+            //Person domyślnyPerson = new Person();
+            //dodanie konstruktora jakiegokolwiek konstruktora powoduje, że nie mamy już konstruktora domyślnego
+            //konstruktor z parametrami
+            //wywoływanie jednego konstruktora z drugiego
+            Person osobaZWielomaDanymi = new Person("Lord", "Voldermort", new DateTime(1975, 11, 3));
+            //inicjalizacja obiektu w prosty sposób:
+            Person anotherPerson = new Person
+            {
+                Imie = "Gracjan",
+                Nazwisko = "Roztocki"
+            };
+            //konstruktor statyczny
+
             #endregion
         }
 
