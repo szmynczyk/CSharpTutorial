@@ -22,6 +22,11 @@ namespace SecondProject
             }
         }
 
+        public double ObliczSredniZasieg()
+        {
+            return Zasieg;
+        }
+
         public string Marka { get; set; }
 
         public string Model { get; set; }

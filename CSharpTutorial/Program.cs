@@ -428,6 +428,25 @@ namespace CSharpTutorial
             //        break;
             //}
 
+            //static void TellMeTheType(object x)
+            //{
+            //    switch (x)
+            //    {
+            //        case int i:
+            //            Console.WriteLine("To wartość typu int!");
+            //            break;
+            //        case string s:
+            //            Console.WriteLine(s.Length);  // można używać typowanej zmiennej s zamiast x  
+            //            break;
+            //        case bool b when b == true:     // pasuje kiedy b to true  
+            //            Console.WriteLine("Prawda");
+            //            break;
+            //        case null:                       // można także dopasować wartość pustą  
+            //            Console.WriteLine("pusto!");
+            //            break;
+            //    }
+            //}
+
             //Zadanie:
             //Napisz zadanie z menu i operacjami matematycznymi z użyciem switch zamiast if
             #endregion

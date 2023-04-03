@@ -48,17 +48,26 @@ namespace SecondProject
 
         public string Obywatelstwo { get; private set; } //przypisywanie tylko wewnątrz klasu
 
-        public void PrzeprowadzSieDoInnegoKraju(string nazwaKraju)
+        public void PrzeprowadzSieDoInnegoKraju(string nazwaKraju = "Szwajcaria")
         {
             Obywatelstwo = nazwaKraju;
         }
 
-        public void PrzedstawSie()
+        public void PrzedstawSie(bool wypiszPłeć, bool pokazObywatelstwo = true)
         {
             Console.WriteLine($"Nazywam się {Imie} {Nazwisko}, moje inicjały to: {Inicjały}");
             Console.WriteLine($"Urodziłem się {DataUrodzenia.ToShortDateString()} więc mam {Wiek} lat(a)");
-            string plec = Płeć == 'm' ? "mężczyzna" : "kobieta";
-            Console.WriteLine($"Moja płeć biologiczna to: {plec}");
+            
+            if(wypiszPłeć)
+            {
+                string plec = Płeć == 'm' ? "mężczyzna" : "kobieta";
+                Console.WriteLine($"Moja płeć biologiczna to: {plec}");
+            }
+
+            if(pokazObywatelstwo)
+            {
+                Console.WriteLine($"Moje obywatelstwo to: {Obywatelstwo}");
+            }
         }
 
         public Person()

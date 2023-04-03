@@ -77,29 +77,31 @@ namespace CSharpTutorial
             //w klasie Program stwórz nowy obiekt stworzonej klasy
             //i przypisz konkretne wartości do pól (do tych, do których się da)
 
+
+
             #endregion
 
             #region Właściwości
 
-            Person ja = new Person();
-            ja.Imie = "Marcin";
-            ja.Nazwisko = "Szymczyk";
-            Console.WriteLine($"Inicjały to: {ja.Inicjały}");
-            ja.DataUrodzenia = new DateTime(1990, 03, 15);
-            
-            Console.WriteLine($"Urodziłem się: {ja.DataUrodzenia.ToShortDateString()}");
-            Console.WriteLine($"Mam {ja.Wiek} lat(a)");
+            //Person ja = new Person();
+            //ja.Imie = "Marcin";
+            //ja.Nazwisko = "Szymczyk";
+            //Console.WriteLine($"Inicjały to: {ja.Inicjały}");
+            //ja.DataUrodzenia = new DateTime(1990, 03, 15);
 
-            var kacper = new Person();
-            kacper.Imie = "Kacper";
+            //Console.WriteLine($"Urodziłem się: {ja.DataUrodzenia.ToShortDateString()}");
+            //Console.WriteLine($"Mam {ja.Wiek} lat(a)");
 
-            var kamil = new Person
-            {
-                Imie = "Kamil",
-                Nazwisko = "Getler",
-                //Obywatelstwo = "Polska"
-                //Płeć = 'm'
-            };
+            //var kacper = new Person();
+            //kacper.Imie = "Kacper";
+
+            //var kamil = new Person
+            //{
+            //    Imie = "Kamil",
+            //    Nazwisko = "Getler",
+            //    //Obywatelstwo = "Polska"
+            //    //Płeć = 'm'
+            //};
 
             //Console.WriteLine($"Płeć Kamila to: {kamil.Płeć}");
             //kamil.PrzeprowadzSieDoInnegoKraju("Palestyna");
@@ -139,19 +141,43 @@ namespace CSharpTutorial
 
             #region Metody
 
-            //Person ja = new Person();
-            //ja.Imie = "Marcin";
-            //ja.Nazwisko = "Szymczyk";
-            //ja.DataUrodzenia = new DateTime(year: 1990, month: 3, day: 15);
+            Person ja = new Person();
+            ja.Imie = "Marcin";
+            ja.Nazwisko = "Szymczyk";
+            ja.DataUrodzenia = new DateTime(year: 1990, month: 3, day: 15);
+            ja.PrzeprowadzSieDoInnegoKraju();
+            ja.PrzedstawSie(false, false);
 
+            //Console.WriteLine($"Nowe obywatelstwo to: {ja.Obywatelstwo}");
             //Console.WriteLine($"Nazywam się {ja.Imie} {ja.Nazwisko}, moje inicjały to: {ja.Inicjały}");
             //Console.WriteLine($"Urodziłem się {ja.DataUrodzenia.ToShortDateString()} więc mam {ja.Wiek} lat(a)");
             //string plec = ja.Płeć == 'm' ? "mężczyzna" : "kobieta";
             //Console.WriteLine($"Moja płeć biologiczna to: {plec}");
-            
-            ////można zastąpić metodą:
+
+            //można zastąpić metodą:
             //ja.PrzedstawSie();
 
+            //Console.WriteLine("----------------------");
+
+            //Person kacper = new Person();
+            //kacper.Imie = "Kacper";
+            //kacper.Nazwisko = "Saganek";
+            //kacper.DataUrodzenia = new DateTime(year: 1992, month: 7, day: 26);
+            //kacper.PrzeprowadzSieDoInnegoKraju("Polska");
+
+            //kacper.PrzedstawSie();
+
+            //Person kacper = new Person("Kacper", "Saganek", new DateTime(year: 1992, month: 7, day: 26));
+            //Person kacper = new Person("Kacper", "Saganek", new DateTime(1992, 26, 7));
+            //kacper.PrzedstawSie();
+
+            Calculator.Dodaj(5);
+
+            //decimal decimal1 = 4.6M;
+            //decimal decimal2 = 5.1M;
+
+            //Console.WriteLine($"Wynik dodawania 5 i 8 to: {wynikDodawania}");
+            //Console.WriteLine($"Wynik dodawania 5 i 8 to: {Calculator.Dodaj(5, 8)}");
 
             //klasa statyczna - nie można utworzyć instancji, wszystkie składowe statyczne
 
@@ -166,10 +192,14 @@ namespace CSharpTutorial
             //metoda statyczna
             //Person.PokazLiczbeLudnosci();
 
+            Car samochod = new Car();
+            samochod.ObliczSredniZasieg;
+
+
             //pola statyczne
 
             //konstruktory
-            var osoba1 = new Person("Kacper", "Saganek", new DateTime(1992, 10, 26));
+            //var osoba1 = new Person("Kacper", "Saganek", new DateTime(1992, 10, 26));
             //domyślny konstruktor
             //dodanie konstruktora jakiegokolwiek konstruktora powoduje, że nie mamy już konstruktora domyślnego
             //konstruktor z parametrami
@@ -184,7 +214,101 @@ namespace CSharpTutorial
             //Calculator.Dodaj(f1, f2, f3);
             //Calculator.Dodaj(f1, f2, f3, f4);
 
+            //var przegladarka = Przegladarka.Firefox;
+
+            //switch ( przegladarka )
+            //{
+            //    case Przegladarka.Firefox:
+            //        Console.WriteLine("Konfiguracja dla firefoxa");
+            //        break;
+            //    case Przegladarka.Chrome:
+            //        Console.WriteLine("Konfiguracja dla chrome");
+            //        break;
+            //    case Przegladarka.Safari:
+            //        Console.WriteLine("Konfiguracja dla Safari");
+            //        break;
+            //    case Przegladarka.Edge:
+            //        Console.WriteLine("Konfiguracja dla Edge");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Nie ma takiej przeglądarki");
+            //        break;
+            //}
+
+            //Console.WriteLine("Przeglądarka firefox: " + (int)Przegladarka.Firefox);
+            //Console.WriteLine("Przeglądarka chrome: " + (int)Przegladarka.Chrome);
+            //Console.WriteLine("Przeglądarka safari: " + (int)Przegladarka.Safari);
+            //Console.WriteLine("Przeglądarka edge: " + (int)Przegladarka.Edge);
+
+
+
             #endregion
+
+            #region Typy referencyjne i wartościowe
+            //Console.WriteLine("-----Typy referencyjne-----");
+
+            //Person os1 = new Person();
+            //os1.Imie = "Marcin";
+
+            //Console.WriteLine("Os1 na początku: " + os1.Imie);
+
+            //Person os2 = os1;
+            //os2.Imie = "Kamil";
+
+            //Console.WriteLine($"Os1 zmiana os2: {os1.Imie}");
+            //Console.WriteLine("Os2 zmiana os2: " + os2.Imie);
+
+            //os1.Imie = "Kacper";
+            //Console.WriteLine("Os1 po zmianie os1: " + os1.Imie);
+            //Console.WriteLine("Os2 poz zmianie os1: " + os2.Imie);
+
+            //Console.WriteLine("-----Typy wartościowe-----");
+
+            //int int1 = 3;
+
+            //Console.WriteLine($"Int1 przed zmianą: {int1}");
+
+            //int int2 = int1;
+            //Console.WriteLine($"Int1 po przypisaniu do Int2: {int1}");
+            //Console.WriteLine($"Int2 po przypisaniu do Int2: {int2}");
+
+            //int2 = 700;
+
+            //Console.WriteLine($"Int1 po zmianie Int2: {int1}");
+            //Console.WriteLine($"Int2 po zmianie Int2: {int2}");
+
+            //int1 = 3456;
+            //Console.WriteLine($"Int1 po zmianie Int1: {int1}");
+            //Console.WriteLine($"Int2 po zmianie Int1: {int2}");
+
+            //Console.WriteLine("-------------------------");
+
+            //string string1 = "String 1";
+
+            //Console.WriteLine($"String1 przed zmianą: {string1}");
+
+            //string string2 = string1;
+            //string2 = "Another string";
+
+            //Console.WriteLine($"string1 po zmianie: {string1}");
+            //Console.WriteLine($"string2 po zmianie: {string2}");
+            #endregion
+        }
+
+        enum Przegladarka
+        {
+            Firefox,
+            Chrome,
+            Safari,
+            Edge
+        }
+
+        enum Operacja
+        {
+            Dodawanie = 1,
+            Odejmowanie = 2,
+            Mnożenie = 4,
+            Dzielenie = 8
         }
     }
 }
