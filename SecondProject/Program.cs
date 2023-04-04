@@ -264,14 +264,28 @@ namespace CSharpTutorial
             //dodanie konstruktora jakiegokolwiek konstruktora powoduje, że nie mamy już konstruktora domyślnego
             //konstruktor z parametrami
             //wywoływanie jednego konstruktora z drugiego
-            Person osobaZWielomaDanymi = new Person("Lord", "Voldermort", new DateTime(1975, 11, 3));
+            //Person osobaZWielomaDanymi = new Person("Lord", "Voldermort", new DateTime(1975, 11, 3));
+            //osobaZWielomaDanymi.PrzedstawSie(false);
+
+            //var dataUrodzeniaGandalfa = DateTime.MinValue + TimeSpan.FromDays(1);
+
+            //var osobaZPelnymKonstruktorem = new Person(imie: "Gandalf", nazwisko: "Szary", dataUrodzeniaGandalfa, 'm');
+            //osobaZPelnymKonstruktorem.PrzedstawSie(wypiszPłeć: true, pokazObywatelstwo: false);
+            //Console.WriteLine($"Inicjały to: {osobaZPelnymKonstruktorem.Inicjały}");
+
+
             //inicjalizacja obiektu w prosty sposób:
-            Person anotherPerson = new Person
-            {
-                Imie = "Gracjan",
-                Nazwisko = "Roztocki"
-            };
+            //Person anotherPerson = new Person
+            //{
+            //    Imie = "Gracjan",
+            //    Nazwisko = "Roztocki",
+            //    Płeć = 'm'
+            //};
+
+            //Console.WriteLine($"Data urodzenia {anotherPerson.Nazwisko}");
             //konstruktor statyczny
+
+            Person person = new Person();
 
             #endregion
         }

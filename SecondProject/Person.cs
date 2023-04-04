@@ -42,7 +42,7 @@ namespace SecondProject
         //}
 
         //przypisanie wartości domyślnej
-        public DateTime DataUrodzenia { get; set; } = new DateTime(month: 3, year: 2003, day: 15);
+        public DateTime DataUrodzenia { get; set; }// = new DateTime(month: 3, year: 2003, day: 15);
 
         public char Płeć { get; init; } = 'm'; //tylko przy tworzeniu
 
@@ -77,7 +77,7 @@ namespace SecondProject
 
         public Person()
         {
-            ++liczbaLudnosci;
+            //++liczbaLudnosci;
             Console.WriteLine("Konstruktor bezparametrowy");
         }
 
@@ -95,6 +95,11 @@ namespace SecondProject
         {
             Płeć = plec;
             Console.WriteLine("Konstruktor z parametrami: imie, nazwisko, data urodzenia, plec");
+        }
+
+        static Person()
+        {
+            Console.WriteLine("Wywołanie konstruktora statycznego");
         }
     }
 }
