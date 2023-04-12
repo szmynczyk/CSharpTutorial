@@ -292,6 +292,8 @@ namespace CSharpTutorial
             samochod.PokazDanePojazdu(pokazPrzebieg: false, pokazSpalanie: true);
 
             samochod.PrzejedzTrase(356, "Wrocław", "Kępno", "Sieradz", "Łódź", "Żyrardów", "Warszawa");
+
+            samochod.PrzejedzTrase(150, "Kraków", "Częstochowa");
             #endregion
         }
 
