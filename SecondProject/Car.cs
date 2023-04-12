@@ -18,7 +18,7 @@ namespace SecondProject
         {
             get
             {
-                return (int)(PojemnoscBaku / (int)Spalanie * _modyfikator);
+                return (int)(PojemnoscBaku / Spalanie * _modyfikator);
             }
         }
 

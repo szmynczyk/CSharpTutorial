@@ -287,6 +287,11 @@ namespace CSharpTutorial
 
             Person person = new Person();
 
+            Samochod samochod = new Samochod("Volkswagen", "Polo", new DateTime(2004, 10, 01), pojemnoscBaku: 50, vin: Guid.NewGuid(), przebieg: 25459, srednieSpalanie: 7.5);
+
+            samochod.PokazDanePojazdu(pokazPrzebieg: false, pokazSpalanie: true);
+
+            samochod.PrzejedzTrase(356, "Wrocław", "Kępno", "Sieradz", "Łódź", "Żyrardów", "Warszawa");
             #endregion
         }
 

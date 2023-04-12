@@ -5,7 +5,7 @@ namespace SecondProject
     internal class Person
     {
         private static ulong liczbaLudnosci = 0;
-
+        public const int liczbaRąk = 2;
         //nowy sposób zapisu
         public string Imie { get; set; }
 
