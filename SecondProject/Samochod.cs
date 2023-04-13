@@ -9,7 +9,7 @@ namespace SecondProject
     public class Samochod
     {
         //pola (prywatne)
-        private double stopienZuzyciaBieznika;
+        double stopienZuzyciaBieznika;
         //pola statyczne
         public static int LiczbaWyprodukowanychSamochodow;
         //stałe
@@ -107,7 +107,7 @@ namespace SecondProject
         {
             Console.WriteLine($"Wyruszamy naszym samochodem {Marka} {Model} w podróż.");
             Console.WriteLine($"Startujemy z {przystanki[0]} i mijamy kolejno:");
-            for (int i = 1; i < przystanki.Length; i++)
+            for (int i = 1; i < przystanki.Length - 1; i++)
             {
                 Console.WriteLine(przystanki[i]);
             }

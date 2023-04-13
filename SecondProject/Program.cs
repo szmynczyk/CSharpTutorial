@@ -285,15 +285,27 @@ namespace CSharpTutorial
             //Console.WriteLine($"Data urodzenia {anotherPerson.Nazwisko}");
             //konstruktor statyczny
 
-            Person person = new Person();
 
             Samochod samochod = new Samochod("Volkswagen", "Polo", new DateTime(2004, 10, 01), pojemnoscBaku: 50, vin: Guid.NewGuid(), przebieg: 25459, srednieSpalanie: 7.5);
+            //Samochod drugiSamochod = new Samochod();
+            //Samochod innySamochod = new Samochod();
 
-            samochod.PokazDanePojazdu(pokazPrzebieg: false, pokazSpalanie: true);
+            //Samochod.PokazDefinicjeSamochodu();
 
-            samochod.PrzejedzTrase(356, "Wrocław", "Kępno", "Sieradz", "Łódź", "Żyrardów", "Warszawa");
+            //Console.WriteLine("Liczba wyprodukowanych samochodow: " + Samochod.LiczbaWyprodukowanychSamochodow);
+            var anotherCar = new Samochod
+            {
+                PojemnoscBaku = 50
+            };
 
-            samochod.PrzejedzTrase(150, "Kraków", "Częstochowa");
+            //samochod.PrzejedzTrase(10, "Centrum handlowe", "Stacja paliw", "Aquaparku");
+            //samochod.PrzejedzTrase(20, "ul. Postępowa", "ul. Grabiszyńską");
+
+            samochod.PokazDanePojazdu(true);
+            Console.WriteLine("----------------------");
+            samochod.PokazDanePojazdu(true, true);
+
+            samochod.Skasuj("jakaś przyczyna");
             #endregion
         }
 
