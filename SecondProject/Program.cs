@@ -1,6 +1,7 @@
 ﻿using CSharpTutorial.Models;
 using SecondProject;
 using System;
+using System.Reflection;
 
 namespace CSharpTutorial
 {
@@ -50,7 +51,7 @@ namespace CSharpTutorial
             //renalutClio.UzyjKlaksonu();
 
 
-            Car someOtherCar = new Car(60);
+            //Car someOtherCar = new Car(60);
             //someOtherCar.PojemnoscBaku = 55;
             //Console.WriteLine("Pojemnosc baku to: " + someOtherCar.PojemnoscBaku);
 
@@ -286,26 +287,26 @@ namespace CSharpTutorial
             //konstruktor statyczny
 
 
+            //Console.WriteLine("Samochód: ");
             Samochod samochod = new Samochod("Volkswagen", "Polo", new DateTime(2004, 10, 01), pojemnoscBaku: 50, vin: Guid.NewGuid(), przebieg: 25459, srednieSpalanie: 7.5);
+            //Console.WriteLine("Samochód bez parametrów: ");
             //Samochod drugiSamochod = new Samochod();
+            //Console.WriteLine("Samochód z 4 parametrami");
+            //Samochod samochodZ4Parametrami = new Samochod("Renault", "Clio", DateTime.Now, 45);
             //Samochod innySamochod = new Samochod();
 
             //Samochod.PokazDefinicjeSamochodu();
 
             //Console.WriteLine("Liczba wyprodukowanych samochodow: " + Samochod.LiczbaWyprodukowanychSamochodow);
-            var anotherCar = new Samochod
-            {
-                PojemnoscBaku = 50
-            };
 
             //samochod.PrzejedzTrase(10, "Centrum handlowe", "Stacja paliw", "Aquaparku");
             //samochod.PrzejedzTrase(20, "ul. Postępowa", "ul. Grabiszyńską");
 
-            samochod.PokazDanePojazdu(true);
-            Console.WriteLine("----------------------");
-            samochod.PokazDanePojazdu(true, true);
+            //samochod.PokazDanePojazdu(true);
+            //Console.WriteLine("----------------------");
+            //samochod.PokazDanePojazdu(true, true);
 
-            samochod.Skasuj("jakaś przyczyna");
+            //samochod.Skasuj("jakaś przyczyna");
             #endregion
         }
 

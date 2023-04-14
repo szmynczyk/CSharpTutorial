@@ -41,6 +41,7 @@ namespace SecondProject
         public Samochod() 
         {
             LiczbaWyprodukowanychSamochodow++;
+            Console.WriteLine("Konstruktor bezparametrowy");
         } //konstruktor domyślny, który nic nie robi oprócz stworzenia instncji klasy
 
         public Samochod(string marka, string model, DateTime rocznik, ushort pojemnoscBaku, double srednieSpalanie, Guid vin, uint przebieg) 
@@ -49,6 +50,7 @@ namespace SecondProject
             Vin = vin;
             Przebieg = przebieg;
             SrednieSpalanie = srednieSpalanie;
+            Console.WriteLine("Konstruktor z 7 parametrami");
         }
 
         public Samochod(string marka, string model, DateTime rocznik, ushort pojemnoscBaku) : this()
@@ -57,6 +59,7 @@ namespace SecondProject
             Model = model;
             Rocznik = rocznik;
             PojemnoscBaku = pojemnoscBaku;
+            Console.WriteLine("Konstruktor z 4 parametrami");
         }
 
         //metody
