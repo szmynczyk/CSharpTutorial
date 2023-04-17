@@ -1,6 +1,8 @@
 ﻿using CSharpTutorial.Models;
 using SecondProject;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 
 namespace CSharpTutorial
@@ -288,7 +290,7 @@ namespace CSharpTutorial
 
 
             //Console.WriteLine("Samochód: ");
-            Samochod samochod = new Samochod("Volkswagen", "Polo", new DateTime(2004, 10, 01), pojemnoscBaku: 50, vin: Guid.NewGuid(), przebieg: 25459, srednieSpalanie: 7.5);
+            //Samochod samochod = new Samochod("Volkswagen", "Polo", new DateTime(2004, 10, 01), pojemnoscBaku: 50, vin: Guid.NewGuid(), przebieg: 25459, srednieSpalanie: 7.5);
             //Console.WriteLine("Samochód bez parametrów: ");
             //Samochod drugiSamochod = new Samochod();
             //Console.WriteLine("Samochód z 4 parametrami");
@@ -307,6 +309,164 @@ namespace CSharpTutorial
             //samochod.PokazDanePojazdu(true, true);
 
             //samochod.Skasuj("jakaś przyczyna");
+            #endregion
+
+            #region Obsługa wyjątków
+
+            int a = 5;
+            int b = 0;
+
+            //Console.WriteLine(a/b);
+
+            //try
+            //{
+            //    Console.WriteLine("Wynik dzielenia to: " + a / b);
+            //    //throw new IndexOutOfRangeException("Straszliwy wyjątek do rzucenia");
+            //}
+            //catch(DivideByZeroException ex)
+            //{
+            //    Console.WriteLine("Nie wolno dzielić przez zero");
+            //    throw new DivideByZeroException();
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("Treść błędu: " + ex.Message);
+            //}
+            //finally
+            //{
+            //    Console.WriteLine("Ten kod wykona się niezależnie czy wyjątek wystąpi czy nie");
+            //}
+
+            //Console.WriteLine("Kod do wykonania dalej");
+
+            //Zadanie - napisz program który przyjmuje od użytkownika numer opcji z menu:,
+            //1. Dodawanie
+            //2. Odejmowanie
+            //3. Mnożenie
+            //4. Dzielenie
+            //5. Reszta z dzielenia
+            //6. Koniec programu
+            //Po czym program przyjmuje od użytkownika i wykonuje (jeśli można) na nich żądaną operację i wypisuje wynik
+            //Przy wybraniu opcji 6. Program się wyłącza
+            //Zabezpiecz program przed sytuacjami:
+            //- kiedy użytkownik wpisze opcję menu, która nie jest liczbą
+            //- kiedy podane liczby do działania nie są liczbą całkowitą
+            //- kiedy wynik działania może być nieprawidłowy (dzielenie przez 0)
+            //Stwórz klasę statyczną do wyświetlania i wybierania opcji z menu
+            //Do obliczeń matematycznych stwórz klasę kalkulator, w której będą metody to wykonywania obliczeń
+            //Dla wszystkich poprawnych opcji oprócz opcji 6 niech program będzie zapętlony - przyjmuje opcję z menu i liczby od nowa
+
+            #endregion
+
+            #region Listy
+
+            string[] petArray = new string[] { "rybka", "żółw", "chomik"};
+
+            var zwierzaczki = new List<string>
+            {
+                "kura",
+                "kaczka",
+                "słoń w karafce",
+                "kot"
+            };
+
+            //Console.WriteLine(zwierzaczki.Count);
+
+            //Console.WriteLine(zwierzaczki[0]);
+
+            //foreach (string zwierzak in zwierzaczki)
+            //{
+            //    Console.WriteLine(zwierzak);
+            //}
+
+            zwierzaczki.AddRange(petArray);
+
+            //Console.WriteLine("Po dodaniu zestawu danych:");
+            //foreach (string zwierzak in zwierzaczki)
+            //{
+            //    Console.WriteLine(zwierzak);
+            //}
+
+            zwierzaczki.Remove("kot");
+            //Console.WriteLine("Po usuwaniu kota lista wygląda tak: ");
+            //foreach (string zwierzak in zwierzaczki)
+            //{
+            //    Console.WriteLine(zwierzak);
+            //}
+
+            //zwierzaczki.RemoveRange(2, 1);
+
+            //Console.WriteLine("Po usuwaniu zakresu lista to:");
+            //foreach (string zwierzak in zwierzaczki)
+            //{
+            //    Console.WriteLine(zwierzak);
+            //}
+
+            //Console.WriteLine("Wrzucanie insertem do środka");
+            //zwierzaczki.Insert(2, "skolopendromorf");
+            //foreach (string zwierzak in zwierzaczki)
+            //{
+            //    Console.WriteLine(zwierzak);
+            //}
+
+            //zwierzaczki.Sort();
+            //Console.WriteLine("Posortowane zwierzaczki");
+            //foreach (string zwierzak in zwierzaczki)
+            //{
+            //    Console.WriteLine(zwierzak);
+            //}
+
+            //zwierzaczki.Reverse();
+            //Console.WriteLine("Odwrócone zwierzaczki");
+            //foreach (string zwierzak in zwierzaczki)
+            //{
+            //    Console.WriteLine(zwierzak);
+            //}
+
+            //zwierzaczki.Clear();
+            //Console.WriteLine("Pusta lista");
+            //foreach (string zwierzak in zwierzaczki)
+            //{
+            //    Console.WriteLine(zwierzak);
+            //}
+
+            #endregion
+
+            #region Dictionary
+
+            Dictionary<string, Samochod> carsDictionary = new Dictionary<string, Samochod>();
+            carsDictionary.Add("Toyota", new Samochod("Toyota", "Yaris", new DateTime(1999, 10, 15), 40));
+
+            Console.WriteLine("Wartość dla klucza Toyota:" + carsDictionary["Toyota"].Marka);
+
+            var ifToyotaExists = carsDictionary.ContainsKey("Toyota");
+            Console.WriteLine("Czy TOYOTA istnieje w słowniku: " + ifToyotaExists);
+
+            var currencies = new Dictionary<string, string>
+            {
+                { "PL", "Złotówka" },
+                { "", "" },
+                { "DE", "Euro" },
+                { "IT", "Euro" }
+            };
+
+            foreach ( var c in currencies )
+            {
+                Console.WriteLine($"Klucz: {c.Key}, wartość: {c.Value}");
+            }
+
+            Console.WriteLine("Czy słownik posiada wartość 'Euro'?");
+            Console.WriteLine(currencies.ContainsValue("Euro"));
+
+            currencies.Remove("");
+            Console.WriteLine("Wartości słownika po usunięciu pustego klucza");
+            foreach (var c in currencies)
+            {
+                Console.WriteLine($"Klucz: {c.Key}, wartość: {c.Value}");
+            }
+
+            currencies.Add("DE", "Marki niemieckie");
+
             #endregion
         }
 
