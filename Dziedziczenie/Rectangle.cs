@@ -1,4 +1,6 @@
-﻿namespace Dziedziczenie
+﻿using System;
+
+namespace Dziedziczenie
 {
     internal class Rectangle : Polygon
     {
