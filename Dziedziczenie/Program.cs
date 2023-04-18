@@ -26,6 +26,8 @@
             //kwadrat.CalculateArea();
             Rectangle prostokąt = new Rectangle("prostokąt", 2, 4, 2, 4);
             prostokąt.CalculateArea();
+
+            Console.WriteLine("Zmiany do pokazania na repo");
         }
     }
 }
