@@ -13,20 +13,26 @@ namespace ListyILINQ
         public Person() { }
         public Person(string firstName, string lastName, DateTime birthDate, Sex sex, int phoneNumber)
         {
+            BirthDate = birthDate;
+            PhoneNumber = phoneNumber;
             FirstName = firstName;
             LastName = lastName;
-            BirthDate = birthDate;
             Sex = sex;
-            PhoneNumber = phoneNumber;
         }
 
-        public string Introduce()
+        public void Introduce(bool showBirthDate = false, bool showPhoneNumber = false)
         {
-            string personData = $"First name: {FirstName}, Last name: {LastName}, " +
-                $"date of birth: {BirthDate.ToShortDateString()}, sex: {Sex}, " +
-                $"phone number: {PhoneNumber}";
-
-            return personData;
+            Console.WriteLine($"First name: {FirstName}");
+            Console.WriteLine($"Last name: {LastName}");
+            if(showBirthDate)
+            {
+                Console.WriteLine($"Birth date: {BirthDate.ToShortDateString()}");
+            }
+            Console.WriteLine($"Sex: {Sex}");
+            if (showPhoneNumber)
+            {
+                Console.WriteLine($"First name: {PhoneNumber}");
+            }
         }
     }
 
