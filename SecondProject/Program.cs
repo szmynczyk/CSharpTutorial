@@ -1,5 +1,4 @@
-﻿using CSharpTutorial.Models;
-using SecondProject;
+﻿using SecondProject;
 using System;
 using System.Collections.Generic;
 using System.Linq;

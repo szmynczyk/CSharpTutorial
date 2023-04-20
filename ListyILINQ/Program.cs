@@ -15,7 +15,7 @@ namespace ListyILINQ
                 new Person("Katarzyna", "Orzoł", new DateTime(1987, 11, 12), Sex.Female, 503123456),
                 new Person("Joanna", "Nowak", new DateTime(2015, 7, 20), Sex.Female, 987654321),
                 new Person("Tadeusz", "Drozda", new DateTime(1960, 1, 2), Sex.Male, 123456789),
-                new Person("Katarzya", "Figura", new DateTime(1962, 3, 22), Sex.Female, 888999888),
+                new Person("Katarzyna", "Figura", new DateTime(1962, 3, 22), Sex.Female, 888999888),
                 new Person("Kacper", "Saganek", new DateTime(1992, 7, 26), Sex.Male, 666555999),
                 new Person("Oliwia", "Szymczyk", new DateTime(2019, 2, 26), Sex.Female, 605654789),
                 new Person("Emma", "Watson", new DateTime(2005, 6, 12), Sex.Female, 512654789),
@@ -24,6 +24,15 @@ namespace ListyILINQ
             };
 
             string[] pets = new string[] { "kot", "pies", "chomik", "papuga", "lama" };
+
+            var someResults = from person in people
+                              where person.FirstName == "Katarzyna"
+                              orderby person.LastName
+                              select person;
+            foreach (var result in someResults)
+            {
+                result.Introduce(true, true);
+            }
         }
     }
 }

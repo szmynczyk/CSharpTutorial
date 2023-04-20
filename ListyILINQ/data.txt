@@ -2,7 +2,7 @@
 Katarzyna;Orzoł;1987-11-12;K;503123456
 Joanna;Nowak;2015-7-20;K;987654321
 Tadeusz;Drozda;1960-1-2;M;123456789
-Katarzya;Figura;1962-3-22;K;888999888
+Katarzyna;Figura;1962-3-22;K;888999888
 Kacper;Saganek;1992-7-26;M;666555999
 Oliwia;Szymczyk;2019-2-26;K;605654789
 Emma;Watson;2005-6-12;K;512654789
